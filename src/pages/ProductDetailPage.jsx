@@ -183,3 +183,19 @@ try {
               required
             />
           </div>
+
+ <div className="button-group">
+            <button className="button primary" type="submit" disabled={saving}>
+              {saving ? 'Saving...' : 'Save changes'}
+            </button>
+            <button className="button secondary" type="button" onClick={() => navigate('/products')}>
+              Cancel
+            </button>
+          </div>
+
+          {message && <p className="status-text">{message}</p>}
+        </form>
+      </div>
+    </section>
+  );
+}
