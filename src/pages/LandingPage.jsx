@@ -22,3 +22,16 @@ export default function LandingPage() {
           </div>
         </div>
 
+<div className="hero-card">
+          <h2>Dashboard features</h2>
+          <ul>
+            <li>GET requests load the latest product catalog.</li>
+            <li>POST requests add new products quickly.</li>
+            <li>PATCH requests update pricing and inventory.</li>
+            <li>Responsive layout for desktop and mobile.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
