@@ -1,6 +1,3 @@
-ProductCard.jsx
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useId } from 'react';
