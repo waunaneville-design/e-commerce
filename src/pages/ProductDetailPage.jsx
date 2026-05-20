@@ -62,3 +62,9 @@ async function loadProduct() {
       priceRef.current?.focus();
     }
   }, [loading]);
+
+   const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormValues((current) => ({ ...current, [name]: value }));
+  };
+
