@@ -68,3 +68,10 @@ async function loadProduct() {
     setFormValues((current) => ({ ...current, [name]: value }));
   };
 
+const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (!product) return;
+
+    setSaving(true);
+    setMessage('Saving updates...');
+
