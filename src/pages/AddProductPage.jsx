@@ -32,3 +32,11 @@ export default function AddProductPage() {
     event.preventDefault();
     setSubmitting(true);
     setStatus('Saving new product...');
+
+      try {
+      const saved = await addProduct({
+        title: form.title,
+        description: form.description,
+        price: Number(form.price),
+        stock: Number(form.stock),
+        category: form.category,
