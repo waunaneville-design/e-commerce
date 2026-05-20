@@ -33,7 +33,7 @@ export default function AppProductPage() {
       <div className="page-header">
         <div>
           <h1>Product catalog</h1>
-          <p>Search and manage your active inventory from one place.</p>
+          <p>Search and manage your active inventory from one place and easier.</p>
         </div>
         <Link className="button primary" to="/new-product">
           Add new product
