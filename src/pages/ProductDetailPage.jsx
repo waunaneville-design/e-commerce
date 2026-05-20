@@ -144,3 +144,17 @@ try {
             />
           </div>
 
+<div className="form-row split-row">
+            <label htmlFor={priceId}>Price ($)</label>
+            <input
+              id={priceId}
+              ref={priceRef}
+              name="price"
+              type="number"
+              min="0"
+              step="0.01"
+              value={formValues.price}
+              onChange={handleChange}
+              required
+            />
+          </div>
