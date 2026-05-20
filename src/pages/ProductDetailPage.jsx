@@ -23,3 +23,16 @@ export default function ProductDetailPage() {
 
   return null;
 }
+
+ if (existingProduct) {
+      setProduct(existingProduct);
+      setFormValues({
+        title: existingProduct.title || '',
+        price: existingProduct.price || '',
+        stock: existingProduct.stock || '',
+        description: existingProduct.description || '',
+      });
+      setLoading(false);
+      return;
+    }
+
