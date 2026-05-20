@@ -61,3 +61,18 @@ export default function AddProductPage() {
         </div>
       </div>
 
+<form className="product-form" onSubmit={handleSubmit}>
+        <div className="form-row">
+          <label htmlFor={titleId}>Title</label>
+          <input
+            id={titleId}
+            ref={nameInputRef}
+            name="title"
+            type="text"
+            value={form.title}
+            onChange={handleChange}
+            required
+            placeholder="Wireless headphones"
+          />
+        </div>
+
