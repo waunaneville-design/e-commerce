@@ -106,3 +106,12 @@ try {
       </section>
     );
   }
+
+   return (
+    <section className="product-detail">
+      <div className="page-header">
+        <div>
+          <h1>Edit product</h1>
+          <p>Update pricing, stock, and descriptions for your product.</p>
+        </div>
+      </div>
