@@ -115,3 +115,18 @@ try {
           <p>Update pricing, stock, and descriptions for your product.</p>
         </div>
       </div>
+
+ <div className="detail-grid">
+        <div className="detail-card">
+          <img
+            src={product.thumbnail || product.images?.[0] || 'https://via.placeholder.com/480x280?text=Product'}
+            alt={product.title}
+          />
+          <div className="detail-meta">
+            <h2>{product.title}</h2>
+            <p className="product-price">${product.price}</p>
+            <p>{product.category}</p>
+            <p>{product.description}</p>
+            <p className="small-text">Stock: {product.stock ?? 'N/A'}</p>
+          </div>
+        </div>
