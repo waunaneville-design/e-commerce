@@ -103,3 +103,17 @@ export default function AddProductPage() {
           />
         </div>
 
+ <div className="form-row split-row">
+          <label htmlFor={stockId}>Stock quantity</label>
+          <input
+            id={stockId}
+            name="stock"
+            type="number"
+            min="0"
+            value={form.stock}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+
