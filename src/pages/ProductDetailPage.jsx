@@ -171,3 +171,15 @@ try {
               required
             />
           </div>
+
+  <div className="form-row">
+            <label htmlFor={descriptionId}>Description</label>
+            <textarea
+              id={descriptionId}
+              name="description"
+              rows={4}
+              value={formValues.description}
+              onChange={handleChange}
+              required
+            />
+          </div>
