@@ -9,19 +9,10 @@ export default function Header() {
     <header className="app-header">
       <div className="brand-block">
         <div>
-          <h1>Admin Portal</h1>
+          <h1>Admin e-Portal</h1>
           <p>Manage your product catalog and pricing in one place.</p>
         </div>
         <span className="product-count">{products.length} products</span>
       </div>
 
-      <nav className="nav-links">
-        <NavLink to="/" end>
-          Home
-        </NavLink>
-        <NavLink to="/products">Products</NavLink>
-        <NavLink to="/new-product">Add product</NavLink>
-      </nav>
-    </header>
-  );
-}
+     
