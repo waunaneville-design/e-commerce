@@ -89,4 +89,17 @@ export default function AddProductPage() {
           />
         </div>
 
+<div className="form-row split-row">
+          <label htmlFor={priceId}>Price ($)</label>
+          <input
+            id={priceId}
+            name="price"
+            type="number"
+            min="0"
+            step="5"
+            value={form.price}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
