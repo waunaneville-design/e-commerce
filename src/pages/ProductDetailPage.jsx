@@ -158,3 +158,16 @@ try {
               required
             />
           </div>
+
+<div className="form-row split-row">
+            <label htmlFor={stockId}>Stock</label>
+            <input
+              id={stockId}
+              name="stock"
+              type="number"
+              min="0"
+              value={formValues.stock}
+              onChange={handleChange}
+              required
+            />
+          </div>
