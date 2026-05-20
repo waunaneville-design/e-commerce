@@ -116,4 +116,16 @@ export default function AddProductPage() {
           />
         </div>
 
+<div className="form-row split-row">
+          <label htmlFor={categoryId}>Category</label>
+          <input
+            id={categoryId}
+            name="category"
+            type="text"
+            value={form.category}
+            onChange={handleChange}
+            required
+            placeholder="Electronics"
+          />
+        </div>
 
