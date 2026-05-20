@@ -91,3 +91,18 @@ try {
       setSaving(false);
     }
   };
+
+  if (loading) {
+    return <p className="status-text">Loading product details...</p>;
+  }
+
+  if (!product) {
+    return (
+      <section className="product-detail">
+        <p className="status-text error">Product not found.</p>
+        <button className="button secondary" onClick={() => navigate('/products')}>
+          Back to products
+        </button>
+      </section>
+    );
+  }
