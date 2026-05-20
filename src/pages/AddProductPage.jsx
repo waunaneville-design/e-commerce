@@ -129,3 +129,15 @@ export default function AddProductPage() {
           />
         </div>
 
+<div className="button-group">
+          <button className="button primary" type="submit" disabled={submitting}>
+            {submitting ? 'Saving...' : 'Create product'}
+          </button>
+        </div>
+      </form>
+
+      {status && <p className="status-text">{status}</p>}
+    </section>
+  );
+}
+
