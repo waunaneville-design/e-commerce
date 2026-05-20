@@ -75,3 +75,10 @@ const handleSubmit = async (event) => {
     setSaving(true);
     setMessage('Saving updates...');
 
+try {
+      const updated = await updateProduct(product.id, {
+        title: formValues.title,
+        price: Number(formValues.price),
+        stock: Number(formValues.stock),
+        description: formValues.description,
+      });
