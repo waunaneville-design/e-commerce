@@ -52,3 +52,12 @@ export default function AddProductPage() {
     }
   };
 
+  return (
+    <section className="product-detail">
+      <div className="page-header">
+        <div>
+          <h1>Add a new product</h1>
+          <p>Create an inventory item with price, stock, and category fields.</p>
+        </div>
+      </div>
+
