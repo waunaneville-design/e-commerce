@@ -36,3 +36,20 @@ export default function ProductDetailPage() {
       return;
     }
 
+async function loadProduct() {
+      setLoading(true);
+      try {
+        const data = await fetchProductById(id);
+        setProduct(data);
+        setFormValues({
+          title: data.title || '',
+          price: data.price || '',
+          stock: data.stock || '',
+          description: data.description || '',
+        });
+      } catch (error) {
+        setMessage(`Unable to load product: ${error.message}`);
+      } finally {
+        setLoading(false);
+      }
+    }
