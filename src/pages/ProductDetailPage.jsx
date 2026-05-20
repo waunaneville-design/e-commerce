@@ -130,3 +130,17 @@ try {
             <p className="small-text">Stock: {product.stock ?? 'N/A'}</p>
           </div>
         </div>
+
+  <form className="product-form" onSubmit={handleSubmit}>
+          <div className="form-row">
+            <label htmlFor={titleId}>Title</label>
+            <input
+              id={titleId}
+              name="title"
+              type="text"
+              value={formValues.title}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
