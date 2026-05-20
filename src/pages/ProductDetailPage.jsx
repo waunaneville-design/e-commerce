@@ -53,3 +53,12 @@ async function loadProduct() {
         setLoading(false);
       }
     }
+
+      loadProduct();
+  }, [fetchProductById, id, products]);
+
+  useEffect(() => {
+    if (!loading) {
+      priceRef.current?.focus();
+    }
+  }, [loading]);
