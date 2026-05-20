@@ -82,3 +82,12 @@ try {
         stock: Number(formValues.stock),
         description: formValues.description,
       });
+
+       setProduct((current) => ({ ...current, ...updated }));
+      setMessage('Product updated successfully.');
+    } catch (error) {
+      setMessage(`Unable to update product: ${error.message}`);
+    } finally {
+      setSaving(false);
+    }
+  };
