@@ -15,7 +15,7 @@ export default function Header() {
         <span className="product-count">{products.length} products</span>
       </div>
 
-     <nav className="nav-links">
+      <nav className="nav-links">
         <NavLink to="/" end>
           Home
         </NavLink>

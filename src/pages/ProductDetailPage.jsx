@@ -195,5 +195,3 @@ try {
     </section>
   );
 }
-
-export default ProductDetailPage;

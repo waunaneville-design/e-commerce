@@ -35,3 +35,5 @@ export default function LandingPage() {
     </section>
   );
 }
+
+export default LandingPage;

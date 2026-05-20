@@ -16,7 +16,7 @@ export default function useProducts() {
         throw new Error('Unable to load products');
       }
       const data = await response.json();
-      setProducts(data.products ; []);
+      setProducts(data.products || []);
     } catch (fetchError) {
       setError(fetchError.message);
     } finally {

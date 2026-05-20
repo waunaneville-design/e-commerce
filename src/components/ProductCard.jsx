@@ -24,3 +24,5 @@ return (
     </article>
   );
 }
+
+export default ProductCard;
