@@ -18,33 +18,15 @@ export default function ProductDetailPage() {
   const descriptionId = useId();
 
   useEffect(() => {
-    // Placeholder effect while component implementation is completed
-  }, []);
-
-  return null;
-}
-
- if (existingProduct) {
-      setProduct(existingProduct);
-      setFormValues({
-        title: existingProduct.title || '',
-        price: existingProduct.price || '',
-        stock: existingProduct.stock || '',
-        description: existingProduct.description || '',
-      });
-      setLoading(false);
-      return;
-    }
-
-async function loadProduct() {
+    const loadProduct = async () => {
       setLoading(true);
       try {
         const data = await fetchProductById(id);
         setProduct(data);
         setFormValues({
           title: data.title || '',
-          price: data.price || '',
-          stock: data.stock || '',
+          price: data.price ?? '',
+          stock: data.stock ?? '',
           description: data.description || '',
         });
       } catch (error) {
@@ -52,9 +34,23 @@ async function loadProduct() {
       } finally {
         setLoading(false);
       }
+    };
+
+    const existingProduct = products?.find((item) => String(item.id) === String(id));
+
+    if (existingProduct) {
+      setProduct(existingProduct);
+      setFormValues({
+        title: existingProduct.title || '',
+        price: existingProduct.price ?? '',
+        stock: existingProduct.stock ?? '',
+        description: existingProduct.description || '',
+      });
+      setLoading(false);
+      return;
     }
 
-      loadProduct();
+    loadProduct();
   }, [fetchProductById, id, products]);
 
   useEffect(() => {
@@ -199,3 +195,5 @@ try {
     </section>
   );
 }
+
+export default ProductDetailPage;
