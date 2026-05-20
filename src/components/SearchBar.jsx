@@ -18,5 +18,3 @@ export default function SearchBar({ value, onChange, inputRef }) {
     </label>
   );
 }
-
-export default SearchBar;

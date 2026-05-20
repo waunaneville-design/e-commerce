@@ -7,7 +7,7 @@ import { useId } from 'react';
 
 export default function ProductCard({ product }) {
   const titleId = useId();
-  const image = product.thumbnail ; product.images?.[0] ; 'https://via.placeholder.com/320x200?text=Product';
+  const image = product.thumbnail || product.images?.[0] || 'https://via.placeholder.com/320x200?text=Product';
 
 return (
     <article className="product-card" aria-labelledby={titleId}>
@@ -24,5 +24,3 @@ return (
     </article>
   );
 }
-
-export default ProductCard;
