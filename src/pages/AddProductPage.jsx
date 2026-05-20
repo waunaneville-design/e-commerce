@@ -40,3 +40,15 @@ export default function AddProductPage() {
         price: Number(form.price),
         stock: Number(form.stock),
         category: form.category,
+});
+      setStatus(`Saved product: ${saved.title}`);
+      setForm(initialForm);
+      navigate('/products');
+    } catch (error) {
+      setStatus(`Unable to save product: ${error.message}`);
+    } finally {
+      setSubmitting(false);
+      nameInputRef.current?.focus();
+    }
+  };
+
