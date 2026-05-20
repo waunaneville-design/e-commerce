@@ -76,3 +76,17 @@ export default function AddProductPage() {
           />
         </div>
 
+ <div className="form-row">
+          <label htmlFor={descriptionId}>Description</label>
+          <textarea
+            id={descriptionId}
+            name="description"
+            value={form.description}
+            onChange={handleChange}
+            rows={4}
+            required
+            placeholder="Write a clear product description"
+          />
+        </div>
+
+
